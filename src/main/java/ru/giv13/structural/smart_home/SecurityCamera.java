@@ -7,6 +7,15 @@ public class SecurityCamera implements Camera {
     public SecurityCamera(String id, String location) {
         this.id = id;
         this.location = location;
+        initializeHardware(); // Дорогая операция инициализации
+    }
+
+    private void initializeHardware() {
+        System.out.println("📹 Инициализация камеры " + id + " в " + location + "...");
+        System.out.println("⏳ Подключение к сети... Калибровка объектива...");
+        // Имитация долгой инициализации
+        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        System.out.println("✅ Камера " + id + " готова к работе");
     }
 
     @Override
@@ -28,5 +37,9 @@ public class SecurityCamera implements Camera {
     @Override
     public String getInfo() {
         return "Камера " + id + " | Местоположение: " + location;
+    }
+
+    public String getId() {
+        return id;
     }
 }
