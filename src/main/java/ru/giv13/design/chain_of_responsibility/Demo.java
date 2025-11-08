@@ -10,7 +10,7 @@ public class Demo {
         OrderHandler availability = new AvailabilityHandler();
         minAmount.setNext(availability);
 
-        Order order = new Order("001", Arrays.asList("Пицца Маргарита", "Чизбургер"), 500.0);
+        Order order = new Order("001", "Иван Иванов", Arrays.asList("Пицца Маргарита", "Чизбургер"), 500.0);
         if (minAmount.process(order)) {
             System.out.println("✅ Заказ " + order.getId() + " подтвержден!");
         }

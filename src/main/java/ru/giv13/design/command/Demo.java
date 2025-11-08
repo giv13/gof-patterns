@@ -8,7 +8,7 @@ public class Demo {
     public static void main(String[] args) {
         OrderSystem orderSystem = new OrderSystem();
         OrderInvoker orderInvoker = new OrderInvoker();
-        Order order = new Order("001", Arrays.asList("Пицца Маргарита", "Чизбургер"), 500.0);
+        Order order = new Order("001", "Иван Иванов", Arrays.asList("Пицца Маргарита", "Чизбургер"), 500.0);
 
         OrderCommand create = new CreateOrderCommand(orderSystem, order);
         orderInvoker.executeCommand(create);

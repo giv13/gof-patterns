@@ -11,7 +11,7 @@ public class OrderSystem {
 
     public void createOrder(Order order) {
         orders.put(order.getId(), order);
-        System.out.println("🆕 Создан заказ: " + order.getId());
+        System.out.println("🆕 Создан заказ: " + order.getId() + " для " + order.getCustomerName());
     }
 
     public void cancelOrder(String orderId) {

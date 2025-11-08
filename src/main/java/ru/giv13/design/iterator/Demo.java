@@ -8,11 +8,11 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) {
         OrderList orders = new OrderList();
-        orders.addOrder(new Order("001", List.of("Пицца Маргарита", "Кола"), 850.0, OrderStatus.DELIVERED));
-        orders.addOrder(new Order("002", List.of("Суши Филадельфия"), 1200.0, OrderStatus.CONFIRMED));
-        orders.addOrder(new Order("003", List.of("Бургер", "Картофель фри"), 450.0, OrderStatus.COOKING));
-        orders.addOrder(new Order("004", List.of("Салат Цезарь"), 350.0, OrderStatus.READY_FOR_DELIVERY));
-        orders.addOrder(new Order("005", List.of("Паста Карбонара", "Салат"), 950.0, OrderStatus.COOKING));
+        orders.addOrder(new Order("001", "Иван Иванов", List.of("Пицца Маргарита", "Кола"), 850.0, OrderStatus.DELIVERED));
+        orders.addOrder(new Order("002", "Петр Петров", List.of("Суши Филадельфия"), 1200.0, OrderStatus.CONFIRMED));
+        orders.addOrder(new Order("003", "Олег Олегов", List.of("Бургер", "Картофель фри"), 450.0, OrderStatus.COOKING));
+        orders.addOrder(new Order("004", "Василий Васильев", List.of("Салат Цезарь"), 350.0, OrderStatus.READY_FOR_DELIVERY));
+        orders.addOrder(new Order("005", "Михаил Михайлов", List.of("Паста Карбонара", "Салат"), 950.0, OrderStatus.COOKING));
 
         OrderIterator iterator = orders.createStatusIterator(OrderStatus.COOKING);
         while (iterator.hasNext()) {

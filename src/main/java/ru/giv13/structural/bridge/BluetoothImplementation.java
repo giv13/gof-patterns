@@ -13,7 +13,7 @@ public class BluetoothImplementation implements DeviceImplementation {
     public void connect() {
         System.out.println("📱 Подключаем " + name + " через Bluetooth...");
         // Имитация подключения
-        try { Thread.sleep(1000); } catch (InterruptedException e) {}
+        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
         isConnected = true;
         System.out.println("✅ " + name + " подключен через Bluetooth");
     }

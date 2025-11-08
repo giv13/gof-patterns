@@ -4,19 +4,22 @@ import java.util.List;
 
 public class Order {
     private final String id;
+    private final String customerName;
     private final List<String> items;
     private final double totalPrice;
     private OrderStatus status;
 
-    public Order(String id, List<String> items, double totalPrice) {
+    public Order(String id, String customerName, List<String> items, double totalPrice) {
         this.id = id;
+        this.customerName = customerName;
         this.items = items;
         this.totalPrice = totalPrice;
         this.status = OrderStatus.CREATED;
     }
 
-    public Order(String id, List<String> items, double totalPrice, OrderStatus status) {
+    public Order(String id, String customerName, List<String> items, double totalPrice, OrderStatus status) {
         this.id = id;
+        this.customerName = customerName;
         this.items = items;
         this.totalPrice = totalPrice;
         this.status = status;
@@ -24,6 +27,10 @@ public class Order {
 
     public String getId() {
         return id;
+    }
+
+    public String getCustomerName() {
+        return customerName;
     }
 
     public List<String> getItems() {
