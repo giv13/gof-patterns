@@ -15,6 +15,13 @@ public class Order {
         this.status = OrderStatus.CREATED;
     }
 
+    public Order(String id, List<String> items, double totalPrice, OrderStatus status) {
+        this.id = id;
+        this.items = items;
+        this.totalPrice = totalPrice;
+        this.status = status;
+    }
+
     public String getId() {
         return id;
     }
