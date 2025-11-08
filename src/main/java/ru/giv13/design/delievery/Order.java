@@ -6,11 +6,13 @@ public class Order {
     private final String id;
     private final List<String> items;
     private final double totalPrice;
+    private OrderStatus status;
 
     public Order(String id, List<String> items, double totalPrice) {
         this.id = id;
         this.items = items;
         this.totalPrice = totalPrice;
+        this.status = OrderStatus.CREATED;
     }
 
     public String getId() {
@@ -23,5 +25,13 @@ public class Order {
 
     public double getTotalPrice() {
         return totalPrice;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
     }
 }
