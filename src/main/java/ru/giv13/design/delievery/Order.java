@@ -3,11 +3,11 @@ package ru.giv13.design.delievery;
 import java.util.List;
 
 public class Order {
-    private final String id;
-    private final String customerName;
-    private final List<String> items;
-    private final double totalPrice;
-    private OrderStatus status;
+    protected final String id;
+    protected String customerName;
+    protected List<String> items;
+    protected double totalPrice;
+    protected OrderStatus status;
 
     public Order(String id, String customerName, List<String> items, double totalPrice) {
         this.id = id;
